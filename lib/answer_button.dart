@@ -4,8 +4,9 @@ class AnswerButton extends StatelessWidget {
   const AnswerButton(
       {required this.answerText, required this.onTap, super.key});
 
-  final String answerText;
-  final void Function() onTap;
+  final String answerText; // receive a String name
+  final void Function()
+      onTap; // receive a void function from questions_screen.dart
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,10 @@ class AnswerButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(40),
         ),
       ),
-      child: Text(answerText),
+      child: Text(
+        answerText,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
